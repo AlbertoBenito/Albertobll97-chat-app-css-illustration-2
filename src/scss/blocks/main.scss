@@ -1,19 +1,36 @@
 @use '../mixins/pseudo.scss' as *;
-.main{
+@use '../mixins/responsive.scss' as *;
 
-    &::after, &::before{
-       @include pseudo(510px,1018px);
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    &::after,
+    &::before {
+      @include pseudo(510px, 1018px) {
         left: -322px;
         top: -609px;
         background-image: var(--gradient);
         border-radius: 15.9375rem;
         z-index: -1;
-        
+      }
     }
-
-    &::before{
-        left: 188px;
-        top: 427px;
-        opacity: .3;
+  
+    &::before {
+      left: calc(100% - 260px);
+      top: 427px;
+      opacity: 0.03;
+    }
+  
+}
+.slogan__mobile{
+    @include responsive(laptop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 125px;
     }
 }

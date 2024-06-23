@@ -1,0 +1,24 @@
+@use '../mixins/responsive.scss' as *;
+.slogan{
+    
+    display: flex;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    margin:150px  auto;
+    &__tittle{
+        font-size: 2.5rem;
+        color: #3E2753;
+
+    }
+    &__p{
+        font-size: 1rem;
+        color: #A39DA9;
+        line-height: 1.75rem;
+
+    }
+    @include responsive(laptop) {
+       text-align: left;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../mixins/pseudo.scss' as *;
+.keyboard{
+    display: flex;
+    background-color: var(--message-price);
+    align-items: center;
+    width: fit-content;
+    width: 100%;
+    height: 32px;
+    margin-block: 0;
+    margin-top: 16px;
+    padding: 6px 9px;
+    border-radius: 16.95px;
+    font-size: 0.5rem;
+    color: #C5C9CC;
+    &__arrow{
+        @include pseudo(24.27px, 24.22px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #3E2753;
+       right: 15px;
+       
+    }
+}

@@ -1,0 +1,30 @@
+.price{
+    display: flex;
+    
+
+    align-items: center;
+    background-image: var(--gradient-reverse);
+    width: fit-content;
+    width: 160px;
+    height: 32px;
+    margin-block: 0;
+    padding: 6px 9px;
+    border-radius: 10px 10px 10px 4px;
+    font-size: 0.5rem;
+        &__oval{
+             margin-right: 8px;
+        }
+        &__message{
+            color: var( --message-price);
+            margin-right: 35px;
+            &--49{
+                margin-right: 49px;
+            }
+        }
+        &__span{   
+            color: var(--message-price);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        
+}
